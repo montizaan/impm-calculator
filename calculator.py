@@ -83,7 +83,7 @@ def calculator():
                     result = division(number, operand)
                     print(result)
                 else:
-                    raise ValueError
+                    raise ValueError("The first character was no operator. Please use an operator.")
 
             # The user adds the result to the history list
             history.append(result)
