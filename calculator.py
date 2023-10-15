@@ -1,7 +1,12 @@
 # The welcome message displayed at the beginning of the program
-welcome_message = ("Welcome to Melvin's calculator. \n\n Options: \n Enter '+' for addition. \n Enter '-' for "
-                   "subtraction. \n Enter '*' for multiplication. \n Enter '/' for division. \n Enter 'exit' to end "
-                   "the program.")
+welcome_message = ("Welcome to Melvin's calculator. \n"
+                   "Options: \n"
+                   "Enter '+ {number}' for addition. \n"
+                   "Enter '- {number}' for subtraction. \n"
+                   "Enter '* {number}' for multiplication. \n"
+                   "Enter '/ {number}' for division. \n"
+                   "Enter 'q' to show calculator's history \n"
+                   "Enter 'exit' to end the program.")
 
 # Mathematical operators
 operators = ('+', '-', '*', '/')
@@ -11,8 +16,8 @@ history = [0]
 
 
 # Function of adding two numbers
-def addition(number, operator):
-    return number + operator
+def addition(number, operand):
+    return number + operand
 
 
 # Function of subtracting two numbers
@@ -29,7 +34,7 @@ def multiplication(number, operand):
 def division(number, operand):
     # The number cannot be plugged in, as dividing by zero is not possible, thus raising ValueError
     if operand == 0:
-        raise ValueError
+        raise ValueError("Division with 0 is not possible. Please try again with another number.")
     return number / operand
 
 
