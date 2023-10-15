@@ -53,7 +53,6 @@ def calculator():
         # The user can query their history with 'q
         if user_input == 'q':
             print(history)
-            break
 
         # Exiting the program
         if user_input == 'exit':
